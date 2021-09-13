@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/chucknorris_talk/static/css/main.a617e044.chunk.css",
+    "main.js": "/chucknorris_talk/static/js/main.477d28ce.chunk.js",
+    "main.js.map": "/chucknorris_talk/static/js/main.477d28ce.chunk.js.map",
+    "runtime-main.js": "/chucknorris_talk/static/js/runtime-main.e249e24e.js",
+    "runtime-main.js.map": "/chucknorris_talk/static/js/runtime-main.e249e24e.js.map",
+    "static/js/2.9fc8b488.chunk.js": "/chucknorris_talk/static/js/2.9fc8b488.chunk.js",
+    "static/js/2.9fc8b488.chunk.js.map": "/chucknorris_talk/static/js/2.9fc8b488.chunk.js.map",
+    "static/js/3.24ee2a74.chunk.js": "/chucknorris_talk/static/js/3.24ee2a74.chunk.js",
+    "static/js/3.24ee2a74.chunk.js.map": "/chucknorris_talk/static/js/3.24ee2a74.chunk.js.map",
+    "index.html": "/chucknorris_talk/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/chucknorris_talk/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.9fc8b488.chunk.js.LICENSE.txt": "/chucknorris_talk/static/js/2.9fc8b488.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/chucknorris_talk/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e249e24e.js",
+    "static/js/2.9fc8b488.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.477d28ce.chunk.js"
+  ]
+}
