@@ -39,8 +39,10 @@ const menuConfig = [
   },
 ];
 
+const defaultUserId = menuConfig[0].id;
+
 function findUser(senderId) {
   return menuConfig.find((config) => config.id === senderId);
 }
 
-export { menuConfig, findUser };
+export { menuConfig, findUser, defaultUserId };

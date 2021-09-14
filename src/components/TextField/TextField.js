@@ -3,17 +3,13 @@ import ChatBoard from "../ChatBoard/ChatBoard";
 import ChatItem from "../ChatItem/ChatItem";
 import DataEntry from "../DataEntry/DataEntry";
 
-import { findUser } from "../../utils/dataChat";
+import { findUser, defaultUserId } from "../../utils/dataChat";
 import s from "./TextField.module.css";
 
 export default function TextField() {
-  let data = JSON.parse(window.localStorage.getItem("currentId"));
-
-  console.log(data);
-
+  let data =
+    JSON.parse(window.localStorage.getItem("currentId")) || defaultUserId;
   let user = findUser(data);
-
-  console.log(user);
 
   const { avatar, name } = user;
 
