@@ -1,7 +1,7 @@
 .infoBord {
   display: flex;
   background-color: #f5f5f5;
-
+  border-bottom: 1px solid #eee3e3;
   padding: 20px;
 }
 

@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f5f5f5;
+  border-top: 1px solid #eee3e3;
 }
 
 .dataEntry {

@@ -1,14 +1,14 @@
 import React from "react";
+import shortid from "shortid";
 import s from "./ChatList.module.css";
+import { menuConfig } from "../../utils/dataChat";
 import ChatUser from "../ChatUser/ChatUser";
 
-export default function ChatList(configs) {
+export default function ChatList() {
   return (
     <ul className={s.list}>
-      {" "}
-      Chats
-      {configs.props.map((config) => (
-        <ChatUser config={config} />
+      {menuConfig.map((config) => (
+        <ChatUser config={config} key={shortid.generate()} />
       ))}
     </ul>
   );

@@ -1,41 +1,46 @@
-import shortid from "shortid";
 import alise from "../images/avatarAlise.png";
 import josie from "../images/avatarjosefine.png";
 import watson from "../images/avatartWatson.png";
 import maks from "../images/avatarmax.png";
+import peter from "../images/avatarPeter.png";
+import bob from "../images/avatarBob.png";
 
 const menuConfig = [
   {
     avatar: alise,
-    id: "1",
+    id: "WYZpppK7Js",
     name: "Alice",
   },
 
   {
     avatar: josie,
-    id: "2",
+    id: "a3n64axP16",
     name: "Josefine",
   },
   {
-    avatar: maks,
-    id: "3",
+    avatar: peter,
+    id: "bp16qLx1dv",
     name: "Peter",
   },
   {
     avatar: maks,
-    id: "4",
+    id: "MXkLNGJPDD",
     name: "Maks",
   },
   {
     avatar: watson,
-    id: "5",
+    id: "O_C4OhMNY_",
     name: "Watson",
   },
   {
-    avatar: watson,
-    id: "6",
+    avatar: bob,
+    id: "tBSEHA7n0K",
     name: "Bob",
   },
 ];
 
-export { menuConfig };
+function findUser(senderId) {
+  return menuConfig.find((config) => config.id === senderId);
+}
+
+export { menuConfig, findUser };

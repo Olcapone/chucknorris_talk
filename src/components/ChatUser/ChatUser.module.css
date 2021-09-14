@@ -1,6 +1,7 @@
 .item {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #eee3e3;
 }
 
 .item > p {

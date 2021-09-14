@@ -1,12 +1,15 @@
 import React from "react";
-import { menuConfig } from "../../utils/dataChat";
+import UserSearch from "../UserSearch/UserSearch";
+import Title from "../Title/Title";
 import ChatList from "../СhatList/ChatList";
 import s from "./Sidebar.module.css";
 
 export default function Sidebar() {
   return (
     <aside className={s.aside}>
-      <ChatList props={menuConfig} />
+      <UserSearch />
+      <Title />
+      <ChatList />
     </aside>
   );
 }
