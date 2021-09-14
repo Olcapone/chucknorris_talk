@@ -4,6 +4,11 @@ import shortid from "shortid";
 import s from "./ChatItem.module.css";
 import data from "../../utils/message.json";
 import { menuConfig } from "../../utils/dataChat";
+
+import ChatBoard from "../ChatBoard/ChatBoard";
+import ChatMessage from "../ChatMessage/ChatMessage";
+import ChatAnswer from "../ChatAnswer/ChatAnswer";
+import DataEntry from "../DataEntry/DataEntry";
 //import useLocalStorage from '../../Hooks/UseLocalStorage';
 
 export default function ChatItem({ idChat }) {
@@ -12,32 +17,15 @@ export default function ChatItem({ idChat }) {
   // const [id, setId] = useState(1);
 
   const findChat = data.messages.find((some) => some.messageId === idChat);
-  //    if (some.messageId === idChat) {
-  //  return {senderName: some.senderName, dialog: some.dialogue};
-  //   }
-
   const findUser = menuConfig.find(
     (config) => config.name === findChat.senderName
   );
-  //       console.log( config.name);
 
-  //       if (config.name === findChat.senderName) {
-
-  //           return  config.avatar
-  //      }
-  //   });
   const { avatar, name } = findUser;
-
-  console.log(findChat.senderName);
-
-  console.log(findUser.avatar);
 
   return (
     <section className={s.section}>
-      <div className={s.infoBord}>
-        <img className={s.avatar} src={avatar} alt="avatar" />
-        <p>{name}</p>
-      </div>
+      <ChatBoard avatar={avatar} name={name} />
       <ul className={s.list}>
         {findChat.dialogue.map((item) => {
           let { messageText, answerText, createdAt } = item;
@@ -45,32 +33,19 @@ export default function ChatItem({ idChat }) {
           return (
             <li className={s.item} key={shortid.generate()}>
               {messageText ? (
-                <>
-                  <div className={s.thumb}>
-                    {" "}
-                    <img className={s.avatar} src={avatar} alt="avatar" />
-                    <p className={s.message}>{messageText}</p>
-                  </div>
-                  <span className={s.date}>{createdAt}</span>
-                </>
+                <ChatMessage
+                  avatar={avatar}
+                  message={messageText}
+                  date={createdAt}
+                />
               ) : (
-                <>
-                  <p className={s.answer}>{answerText}</p>
-                  <span className={s.answerDate}>{createdAt}</span>
-                </>
+                <ChatAnswer answer={answerText} date={createdAt} />
               )}
             </li>
           );
         })}
       </ul>
-      <form className={s.formMessage}>
-        <input
-          className={s.dataEntry}
-          type="text"
-          placeholder="Type your message"
-        />
-        <button type="submit">submit</button>
-      </form>
+      <DataEntry />
     </section>
   );
 }

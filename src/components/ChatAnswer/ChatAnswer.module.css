@@ -1,0 +1,12 @@
+.answerDate {
+  align-self: flex-end;
+  color: #607d7d;
+  font-size: 12px;
+}
+
+.answer {
+  padding: 10px;
+  border-radius: 25px;
+
+  background-color: #d6e6e6;
+}

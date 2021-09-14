@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./ChatList.module.css";
+import ChatUser from "../ChatUser/ChatUser";
 
 export default function ChatList(configs) {
   return (
@@ -7,10 +8,7 @@ export default function ChatList(configs) {
       {" "}
       Chats
       {configs.props.map((config) => (
-        <li className={s.item} key={config.id}>
-          <img className={s.icon} src={config.avatar} alt="avatar" />
-          <p>{config.name}</p>
-        </li>
+        <ChatUser config={config} />
       ))}
     </ul>
   );

@@ -1,0 +1,19 @@
+/* form styles */
+
+.formMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.dataEntry {
+  width: 90%;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+
+  border: 1px solid #eee3e3;
+  border-radius: 25px;
+}

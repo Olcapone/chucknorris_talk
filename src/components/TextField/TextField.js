@@ -5,7 +5,7 @@ import s from "./TextField.module.css";
 export default function TextField() {
   return (
     <div className={s.main}>
-      <ChatItem idChat={"5"} />
+      <ChatItem idChat={"6"} />
     </div>
   );
 }
