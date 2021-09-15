@@ -6,9 +6,8 @@ import DataEntry from "../DataEntry/DataEntry";
 import { findUser, defaultUserId } from "../../utils/dataChat";
 import s from "./TextField.module.css";
 
-export default function TextField() {
-  let data =
-    JSON.parse(window.localStorage.getItem("currentId")) || defaultUserId;
+export default function TextField({ tranferID }) {
+  let data = tranferID || defaultUserId;
   let user = findUser(data);
 
   const { avatar, name } = user;
