@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/chucknorris_talk/static/css/main.fab6ff64.chunk.css",
-    "main.js": "/chucknorris_talk/static/js/main.d29e4d2f.chunk.js",
-    "main.js.map": "/chucknorris_talk/static/js/main.d29e4d2f.chunk.js.map",
+    "main.css": "/chucknorris_talk/static/css/main.a26dc351.chunk.css",
+    "main.js": "/chucknorris_talk/static/js/main.bb4c71ec.chunk.js",
+    "main.js.map": "/chucknorris_talk/static/js/main.bb4c71ec.chunk.js.map",
     "runtime-main.js": "/chucknorris_talk/static/js/runtime-main.5179c616.js",
     "runtime-main.js.map": "/chucknorris_talk/static/js/runtime-main.5179c616.js.map",
     "static/js/2.9810edec.chunk.js": "/chucknorris_talk/static/js/2.9810edec.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.7d804cb4.chunk.js": "/chucknorris_talk/static/js/3.7d804cb4.chunk.js",
     "static/js/3.7d804cb4.chunk.js.map": "/chucknorris_talk/static/js/3.7d804cb4.chunk.js.map",
     "index.html": "/chucknorris_talk/index.html",
-    "static/css/main.fab6ff64.chunk.css.map": "/chucknorris_talk/static/css/main.fab6ff64.chunk.css.map",
+    "static/css/main.a26dc351.chunk.css.map": "/chucknorris_talk/static/css/main.a26dc351.chunk.css.map",
     "static/js/2.9810edec.chunk.js.LICENSE.txt": "/chucknorris_talk/static/js/2.9810edec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5179c616.js",
     "static/js/2.9810edec.chunk.js",
-    "static/css/main.fab6ff64.chunk.css",
-    "static/js/main.d29e4d2f.chunk.js"
+    "static/css/main.a26dc351.chunk.css",
+    "static/js/main.bb4c71ec.chunk.js"
   ]
 }
