@@ -1,24 +1,49 @@
-import React from "react";
-// import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import shortid from "shortid";
 import s from "./ChatItem.module.css";
 import data from "../../utils/message.json";
-
+import Api from "../../Api/Api";
+import useLocalStorage from "../../Hooks/UseLocalStorage";
 import ChatMessage from "../ChatMessage/ChatMessage";
 import ChatAnswer from "../ChatAnswer/ChatAnswer";
 
-//import useLocalStorage from '../../Hooks/UseLocalStorage';
+export default function ChatItem({ idChat, avatar, newMessage }) {
+  const [messageText, setMessage] = useLocalStorage("messageText", []);
+  let findChat = data.messages.find((some) => some.messageId === idChat);
+  const chucknorrisTalk = useRef();
 
-export default function ChatItem({ idChat, avatar }) {
-  // const [messageText, setMessage] = useLocalStorage('messageText', '');
-  // const [answerText, setAnswer] = useLocalStorage('answerText', '');
-  // const [id, setId] = useState(1);
+  useEffect(() => {
+    console.log("im run!");
+    setMessage(findChat.dialogue);
+  }, [findChat]);
 
-  const findChat = data.messages.find((some) => some.messageId === idChat);
+  useEffect(() => {
+    console.log("im change");
+    // let timerId;
+
+    if (newMessage !== "") {
+      setMessage((messageText) => [...messageText, newMessage]);
+
+      setTimeout(() => {
+        Api()
+          .then((res) => {
+            console.log("Api run!");
+
+            chucknorrisTalk.current = res;
+            const { created_at, value } = chucknorrisTalk.current;
+            const normaliseDate = created_at.slice(0, 19);
+            const message = { messageText: value, createdAt: normaliseDate };
+
+            setMessage((messageText) => [...messageText, message]);
+          })
+          .catch((error) => error);
+      }, 15000);
+    }
+  }, [newMessage]);
 
   return (
     <ul className={s.list}>
-      {findChat.dialogue.map((item) => {
+      {messageText.map((item) => {
         let { messageText, answerText, createdAt } = item;
 
         return (

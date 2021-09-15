@@ -16,6 +16,7 @@ export default function UserSearch({ value, onChange }) {
           name="filter"
           value={value}
           onChange={onChange}
+          placeholder="Search or start new chat"
         />
       </label>
     </section>
