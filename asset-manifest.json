@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/chucknorris_talk/static/css/main.78494273.chunk.css",
-    "main.js": "/chucknorris_talk/static/js/main.29b70473.chunk.js",
-    "main.js.map": "/chucknorris_talk/static/js/main.29b70473.chunk.js.map",
+    "main.js": "/chucknorris_talk/static/js/main.b88ccff4.chunk.js",
+    "main.js.map": "/chucknorris_talk/static/js/main.b88ccff4.chunk.js.map",
     "runtime-main.js": "/chucknorris_talk/static/js/runtime-main.0434af8b.js",
     "runtime-main.js.map": "/chucknorris_talk/static/js/runtime-main.0434af8b.js.map",
     "static/js/2.9e63498a.chunk.js": "/chucknorris_talk/static/js/2.9e63498a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0434af8b.js",
     "static/js/2.9e63498a.chunk.js",
     "static/css/main.78494273.chunk.css",
-    "static/js/main.29b70473.chunk.js"
+    "static/js/main.b88ccff4.chunk.js"
   ]
 }
