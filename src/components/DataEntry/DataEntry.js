@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdSend } from "react-icons/io";
 import s from "./DataEntry.module.css";
 
 export default function DataEntry() {
@@ -9,7 +10,7 @@ export default function DataEntry() {
         type="text"
         placeholder="Type your message"
       />
-      <button type="submit">submit</button>
+      <IoMdSend />
     </form>
   );
 }
