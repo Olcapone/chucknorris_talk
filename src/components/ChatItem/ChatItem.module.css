@@ -19,6 +19,6 @@
   margin-bottom: 20px;
 }
 
-.item:nth-child(2n) {
+.dispatchedMessage {
   align-self: flex-end;
 }

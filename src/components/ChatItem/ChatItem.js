@@ -51,7 +51,10 @@ export default function ChatItem({ idChat, avatar, newMessage }) {
         let { messageText, answerText, createdAt } = item;
 
         return (
-          <li className={s.item} key={shortid.generate()}>
+          <li
+            className={`${s.item} ${answerText && s.dispatchedMessage}`}
+            key={shortid.generate()}
+          >
             {messageText ? (
               <ChatMessage
                 avatar={avatar}
