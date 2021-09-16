@@ -10,11 +10,14 @@ import ChatAnswer from "../ChatAnswer/ChatAnswer";
 export default function ChatItem({ idChat, avatar, newMessage }) {
   const [messageText, setMessage] = useLocalStorage("messageText", []);
   let findChat = data.messages.find((some) => some.messageId === idChat);
+  let defaultPage =
+    JSON.parse(window.localStorage.getItem("messageText")) || findChat.dialogue;
   const chucknorrisTalk = useRef();
 
   useEffect(() => {
     console.log("im run!");
-    setMessage(findChat.dialogue);
+
+    setMessage(defaultPage);
   }, [findChat]);
 
   useEffect(() => {
