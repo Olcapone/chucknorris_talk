@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ChatBoard from "../ChatBoard/ChatBoard";
 import ChatItem from "../ChatItem/ChatItem";
 import DataEntry from "../DataEntry/DataEntry";
+import moment from "moment";
 
 import { findUser, defaultUserId } from "../../utils/dataChat";
 import s from "./TextField.module.css";
@@ -13,7 +14,11 @@ export default function TextField({ tranferID }) {
   const { avatar, name } = user;
 
   const sendMessage = (value) => {
-    const normaliseDate = String(new Date()).slice(0, 24);
+    const data = new Date();
+    const normaliseDate = `${moment(data).format("l")} ${moment(data).format(
+      "LT"
+    )}`;
+
     saveMessage({ answerText: value, createdAt: normaliseDate });
   };
 

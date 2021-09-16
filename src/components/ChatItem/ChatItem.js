@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import shortid from "shortid";
+import moment from "moment";
 import s from "./ChatItem.module.css";
 import data from "../../utils/message.json";
 import Api from "../../Api/Api";
@@ -15,8 +16,6 @@ export default function ChatItem({ idChat, avatar, newMessage }) {
   const chucknorrisTalk = useRef();
 
   useEffect(() => {
-    console.log("im run!");
-
     setMessage(defaultPage);
   }, [findChat]);
 
@@ -34,8 +33,12 @@ export default function ChatItem({ idChat, avatar, newMessage }) {
             console.log("Api run!");
 
             chucknorrisTalk.current = res;
-            const { created_at, value } = chucknorrisTalk.current;
-            const normaliseDate = created_at.slice(0, 19);
+            const { value } = chucknorrisTalk.current;
+            const data = new Date();
+            const normaliseDate = `${moment(data).format("l")} ${moment(
+              data
+            ).format("LT")}`;
+
             const message = { messageText: value, createdAt: normaliseDate };
 
             setMessage((messageText) => [...messageText, message]);

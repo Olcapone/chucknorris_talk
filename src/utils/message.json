@@ -7,10 +7,10 @@
       "senderName": "Alice",
       "dialogue": 
       [
-         { "messageText" : "It’s like flooding outside! What happened to the weather report? I thought this depression was supposed to pass.", "createdAt": "2021-08-14 08:25"},
-          {"answerText" : " Yeah, we all thought so too. That’s what I read online this morning. I missed my office for this too.", "createdAt": "2021-08-14 08:26"},
-           { "messageText" : "I guess a thunderstorm is on its way too.", "createdAt": "2021-08-14 08:26"},
-            { "answerText" : "Can we go inside? I am already half wet!", "createdAt": "2021-08-14 08:27"}   
+         { "messageText" : "It’s like flooding outside! What happened to the weather report? I thought this depression was supposed to pass.", "createdAt": "8/14/2021  08:25 AM "},
+          {"answerText" : " Yeah, we all thought so too. That’s what I read online this morning. I missed my office for this too.", "createdAt": "8/14/2021  08:26 AM"},
+           { "messageText" : "I guess a thunderstorm is on its way too.", "createdAt": "8/14/2021  08:26 AM"},
+            { "answerText" : "Can we go inside? I am already half wet!", "createdAt": "8/14/2021  08:27 AM"}   
       ]      
     },
     {
@@ -18,13 +18,13 @@
       "senderName": "Josefine",
       "dialogue": 
       [
-         { "messageText" : "Hey! How did your English test go?",  "createdAt": "2021-02-15 18:04"},
-          {"answerText" : " Not really bad, thanks. I’m just glad that all the exams are over! How about you …how’d your practical examination go?",  "createdAt": "2021-02-15 18:05"},
-           { "messageText" : "Oh, it went really well. I can’t thank you enough for helping me with it! I owe you a treat for that.",  "createdAt": "2021-02-15 18:06"},
-            { "answerText" : "It’s my pleasure. So … Do you feel like preparing a bit for the React exam scheduled for next week?",  "createdAt": "2021-02-15 18:07"},
-             {"messageText" : "Yeah, sure! Meet me at the library after 7 then?", "createdAt": "2021-02-15 18:08"},
-           { "answerText" : "All right. I’ll bring my notes too then.", "createdAt": "2021-02-15 18:09"},
-            { "messageText" : "Sure. See you then. Bye. ", "createdAt": "2021-02-15 18:09"}
+         { "messageText" : "Hey! How did your English test go?",  "createdAt": "2/15/2021  12:00 PM"},
+          {"answerText" : " Not really bad, thanks. I’m just glad that all the exams are over! How about you …how’d your practical examination go?",  "createdAt": "2/15/2021  12:05 PM"},
+           { "messageText" : "Oh, it went really well. I can’t thank you enough for helping me with it! I owe you a treat for that.",  "createdAt": "2/15/2021  12:06 PM"},
+            { "answerText" : "It’s my pleasure. So … Do you feel like preparing a bit for the React exam scheduled for next week?",  "createdAt": "2/15/2021  12:07 PM"},
+             {"messageText" : "Yeah, sure! Meet me at the library after 7 then?", "createdAt": "2/15/2021  12:09 PM"},
+           { "answerText" : "All right. I’ll bring my notes too then.", "createdAt": "2/15/2021  12:11 PM"},
+            { "messageText" : "Sure. See you then. Bye. ", "createdAt": "2/15/2021  12:13 PM"}
 
       ]
      
@@ -34,14 +34,14 @@
       "senderName": "Peter",
       "dialogue": 
       [
-         { "messageText" : "Hey, how have you been? Long time no see!",  "createdAt": "2021-06-15 13:04"},
-          {"answerText" : " Hey! What a surprise! Yes, you are right, we haven’t seen each other in a long time. How have you been?",  "createdAt": "2021-06-15 13:07"},
-           { "messageText" : "There is an important campaign next week which is keeping me busy otherwise rest is going good in my life. How about you?",  "createdAt": "2021-06-15 13:10"},
-            { "answerText" : "Oh! I just finished a meeting with a very important client of mine and now I finally have some free time. I feel relieved that I’m done with it.",  "createdAt": "2021-06-15 13:12"},
-             {"messageText" : "Good for you then. Hey! Let’s make a plan and catch up with each other after next week. What do you say?", "createdAt": "2021-06-15 13:14"},
-           { "answerText" : "Sure, why not? Give me a call when you are done with your project.", "createdAt": "2021-06-15 13:20"},
-            { "messageText" : "Sure, then. Bye, take care. ", "createdAt": "2021-06-15 13:21"},
-            { "answerText" : " Bye buddy.", "createdAt": "2021-06-15 13:21"}
+         { "messageText" : "Hey, how have you been? Long time no see!",  "createdAt": "6/15/2021  12:06 PM"},
+          {"answerText" : " Hey! What a surprise! Yes, you are right, we haven’t seen each other in a long time. How have you been?",  "createdAt": "6/15/2021  12:06 PM"},
+           { "messageText" : "There is an important campaign next week which is keeping me busy otherwise rest is going good in my life. How about you?",  "createdAt": "6/15/2021  12:07 PM"},
+            { "answerText" : "Oh! I just finished a meeting with a very important client of mine and now I finally have some free time. I feel relieved that I’m done with it.",  "createdAt": "6/15/2021  12:09 PM"},
+             {"messageText" : "Good for you then. Hey! Let’s make a plan and catch up with each other after next week. What do you say?", "createdAt": "6/15/2021  12:12 PM"},
+           { "answerText" : "Sure, why not? Give me a call when you are done with your project.", "createdAt": "6/15/2021  12:15 PM"},
+            { "messageText" : "Sure, then. Bye, take care. ", "createdAt": "6/15/2021  12:20 PM"},
+            { "answerText" : " Bye buddy.", "createdAt": "6/15/2021  12:21 PM"}
 
       ]
      
@@ -51,14 +51,14 @@
       "senderName": "Maks",
       "dialogue": 
       [
-         { "messageText" : "Hi! How are you? What are your plans for today?",  "createdAt": "2021-09-07 12:04"},
-          {"answerText" : " Oh, hi! I was just thinking about giving you a call. Well, I am free today, what about you?",  "createdAt": "2021-09-07 12:07"},
-           { "messageText" : "That’s nice. I was wondering if you’d like to go to a dinner party tonight",  "createdAt": "2021-09-07 12:09"},
-            { "answerText" : "Sure, I’d love to! Where is the party?",  "createdAt": "2021-09-07 12:10"},
-             {"messageText" : "It’s in the Park Hotel?", "createdAt": "2021-09-07 12:11"},
-           { "answerText" : "Sounds great!", "createdAt": "2021-09-07 12:12"},
-            { "messageText" : "Ok I’ll pick you up around 8:30. We will probably reach the hall by 9 p.m. ", "createdAt": "2021-09-07 12:20"},
-            { "answerText" : "Great! See you then. Bye!", "createdAt": "2021-09-07 12:21"}
+         { "messageText" : "Hi! How are you? What are your plans for today?",  "createdAt": "9/7/2021  12:06 PM"},
+          {"answerText" : " Oh, hi! I was just thinking about giving you a call. Well, I am free today, what about you?",  "createdAt": "9/7/2021  12:07 PM"},
+           { "messageText" : "That’s nice. I was wondering if you’d like to go to a dinner party tonight",  "createdAt": "9/7/2021  12:09 PM"},
+            { "answerText" : "Sure, I’d love to! Where is the party?",  "createdAt": "9/7/2021  12:11 PM"},
+             {"messageText" : "It’s in the Park Hotel?", "createdAt": "9/7/2021  12:13 PM"},
+           { "answerText" : "Sounds great!", "createdAt": "9/7/2021  12:21 PM"},
+            { "messageText" : "Ok I’ll pick you up around 8:30. We will probably reach the hall by 9 p.m. ", "createdAt": "9/7/2021  12:25 PM"},
+            { "answerText" : "Great! See you then. Bye!", "createdAt": "9/7/2021  12:25 PM"}
 
       ]
      
@@ -68,12 +68,12 @@
       "senderName": "Watson",
       "dialogue": 
       [
-         { "messageText" : "I just bought a ticket to New York City. I’m so excited to see the city!",  "createdAt": "2021-03-21 18:04"},
-          {"answerText" : " Good for you! Traveling is so much fun. I love discovering new places and new people. When are you leaving?",  "createdAt": "2021-03-21 18:05"},
-           { "messageText" : "Next week. I’m taking the red eye. It was cheaper. Hopefully, I’ll be able to sleep on the plane.",  "createdAt": "2021-03-21 18:06"},
-            { "answerText" : "I wish I could go with you! New York City is a magical place. You will have so much fun.",  "createdAt": "2021-03-21 18:07"},
-             {"messageText" : "I hope so. I’m going to visit my brother who lives there. I will stay for a week and then take the train down to Washington, D.C.", "createdAt": "2021-03-21 18:08"},
-           { "answerText" : "That sounds like a great vacation. I’m looking forward to a week at the beach for my summer vacation. I just want to relax.", "createdAt": "2021-03-21 18:09"}
+         { "messageText" : "I just bought a ticket to New York City. I’m so excited to see the city!",  "createdAt": "3/21/2021  6:06 PM"},
+          {"answerText" : " Good for you! Traveling is so much fun. I love discovering new places and new people. When are you leaving?",  "createdAt": "3/21/2021  6:07 PM"},
+           { "messageText" : "Next week. I’m taking the red eye. It was cheaper. Hopefully, I’ll be able to sleep on the plane.",  "createdAt": "3/21/2021  6:08 PM"},
+            { "answerText" : "I wish I could go with you! New York City is a magical place. You will have so much fun.",  "createdAt": "3/21/2021  6:10 PM"},
+             {"messageText" : "I hope so. I’m going to visit my brother who lives there. I will stay for a week and then take the train down to Washington, D.C.", "createdAt": "3/21/2021  6:12 PM"},
+           { "answerText" : "That sounds like a great vacation. I’m looking forward to a week at the beach for my summer vacation. I just want to relax.", "createdAt": "3/21/2021  6:13 PM"}
             
 
       ]
@@ -84,12 +84,12 @@
       "senderName": "Bob",
       "dialogue": 
       [
-         { "messageText" : "Thanks for meeting with me during your lunch hour. I appreciate it.",  "createdAt": "2021-04-15 18:04"},
-          {"answerText" : " No problem. I’m happy to help. What’s going on?",  "createdAt": "2021-04-15 18:05"},
-           { "messageText" : "Oh you know, the usual. Should I take this new job? Or do I stick with my current one?",  "createdAt": "2021-04-15 18:06"},
-            { "answerText" : "Well, I think it’s time for a change, don’t you? They pay you late and you are unhappy.",  "createdAt": "2021-04-15 18:07"},
-             {"messageText" : "Do you really think so?", "createdAt": "2021-04-15 18:08"},
-           { "answerText" : "I know so. And I’ve been listening to you complain for over a year now. Trust me. Take the job. What do you have to lose?", "createdAt": "2021-04-15 18:09"}
+         { "messageText" : "Thanks for meeting with me during your lunch hour. I appreciate it.",  "createdAt": "4/15/2021  6:06 PM"},
+          {"answerText" : " No problem. I’m happy to help. What’s going on?",  "createdAt": "4/15/2021  6:07 PM"},
+           { "messageText" : "Oh you know, the usual. Should I take this new job? Or do I stick with my current one?",  "createdAt": "4/15/2021  6:10 PM"},
+            { "answerText" : "Well, I think it’s time for a change, don’t you? They pay you late and you are unhappy.",  "createdAt": "4/15/2021  6:14 PM"},
+             {"messageText" : "Do you really think so?", "createdAt": "4/15/2021  6:25 PM"},
+           { "answerText" : "I know so. And I’ve been listening to you complain for over a year now. Trust me. Take the job. What do you have to lose?", "createdAt": "4/15/2021  6:26 PM"}
       ]
      
     }
