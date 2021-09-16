@@ -32,9 +32,8 @@ export default function DataEntry({ onChange }) {
         onChange={handleChange}
         placeholder="Type your message"
       />
-      <IoMdSend />
       <button className={s.button} type="submit">
-        Add message
+        <IoMdSend />
       </button>
     </form>
   );

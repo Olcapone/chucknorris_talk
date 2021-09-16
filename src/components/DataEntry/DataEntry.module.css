@@ -12,6 +12,7 @@
 .formMessage > svg {
   position: absolute;
   right: 5%;
+  z-index: 2;
   width: 12px;
   height: 12px;
   fill: #607d7d;
@@ -27,4 +28,22 @@
   border: 1px solid #eee3e3;
   outline: none;
   border-radius: 25px;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  right: 5%;
+
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.button > svg {
+  width: 18px;
+  height: 18px;
+  fill: #607d7d;
 }
