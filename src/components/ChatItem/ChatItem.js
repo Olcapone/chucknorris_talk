@@ -10,8 +10,8 @@ import ChatAnswer from "../ChatAnswer/ChatAnswer";
 export default function ChatItem({ idChat, avatar, newMessage }) {
   const [messageText, setMessage] = useLocalStorage("messageText", []);
   let findChat = data.messages.find((some) => some.messageId === idChat);
-  let defaultPage =
-    JSON.parse(window.localStorage.getItem("messageText")) || findChat.dialogue;
+  let defaultPage = findChat.dialogue;
+  // JSON.parse(window.localStorage.getItem("messageText")) || пока нет потому что не меняються чаты
   const chucknorrisTalk = useRef();
 
   useEffect(() => {
