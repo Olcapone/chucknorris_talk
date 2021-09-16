@@ -24,7 +24,8 @@ export default function ChatItem({ idChat, avatar, newMessage }) {
     console.log("im change");
     // let timerId;
 
-    if (newMessage !== "") {
+    if (newMessage !== "" && newMessage.answerText !== "") {
+      console.log(newMessage.answerText);
       setMessage((messageText) => [...messageText, newMessage]);
 
       setTimeout(() => {
