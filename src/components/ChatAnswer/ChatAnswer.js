@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import s from "./ChatAnswer.module.css";
 
 export default function ChatAnswer({ answer, date }) {
@@ -9,3 +10,8 @@ export default function ChatAnswer({ answer, date }) {
     </>
   );
 }
+
+ChatAnswer.propTypes = {
+  answer: PropTypes.string,
+  date: PropTypes.string,
+};

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import PropTypes from "prop-types";
 import ChatBoard from "../ChatBoard/ChatBoard";
 import ChatItem from "../ChatItem/ChatItem";
 import DataEntry from "../DataEntry/DataEntry";
@@ -31,3 +31,7 @@ export default function TextField({ tranferID }) {
     </section>
   );
 }
+
+TextField.propTypes = {
+  tranferID: PropTypes.string,
+};

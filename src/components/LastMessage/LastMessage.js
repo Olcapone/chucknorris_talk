@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import s from "./LastMessage.module.css";
-import { func } from "prop-types";
 
 export default function LastMessage({ last }) {
   const [message, changeMes] = useState("");
@@ -24,3 +24,7 @@ export default function LastMessage({ last }) {
     </p>
   );
 }
+
+LastMessage.propTypes = {
+  last: PropTypes.shape({}),
+};

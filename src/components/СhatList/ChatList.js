@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import shortid from "shortid";
 import axios from "axios";
 import s from "./ChatList.module.css";
@@ -58,3 +59,7 @@ export default function ChatList({ searchUser, onSubmit }) {
     </ul>
   );
 }
+
+ChatList.propTypes = {
+  searchUser: PropTypes.string,
+};

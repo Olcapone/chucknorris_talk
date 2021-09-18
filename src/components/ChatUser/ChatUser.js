@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import s from "./ChatUser.module.css";
 import LastMessage from "../LastMessage/LastMessage";
 
@@ -21,3 +22,7 @@ export default function ChatUser({ config }) {
     </>
   );
 }
+
+ChatUser.propTypes = {
+  config: PropTypes.shape({}),
+};

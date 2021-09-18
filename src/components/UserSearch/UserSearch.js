@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaUserAlt, FaSearch } from "react-icons/fa";
 import s from "./UserSearch.module.css";
 
@@ -22,3 +23,7 @@ export default function UserSearch({ value, onChange }) {
     </section>
   );
 }
+
+UserSearch.propTypes = {
+  value: PropTypes.string,
+};

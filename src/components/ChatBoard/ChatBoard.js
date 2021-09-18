@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import s from "./ChatBoard.module.css";
 
 export default function ChatBoard({ avatar, name }) {
@@ -9,3 +10,8 @@ export default function ChatBoard({ avatar, name }) {
     </div>
   );
 }
+
+ChatBoard.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+};

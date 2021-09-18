@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
-
+import PropTypes from "prop-types";
 import shortid from "shortid";
 import axios from "axios";
 import moment from "moment";
@@ -106,3 +106,8 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
     </>
   );
 }
+
+ChatItem.propTypes = {
+  idChat: PropTypes.string,
+  newMessage: PropTypes.shape({}),
+};
