@@ -1,31 +1,56 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import shortid from "shortid";
+import axios from "axios";
 import moment from "moment";
 import s from "./ChatItem.module.css";
-import data from "../../utils/message.json";
+
 import Api from "../../Api/Api";
-import useLocalStorage from "../../Hooks/UseLocalStorage";
 import ChatMessage from "../ChatMessage/ChatMessage";
 import ChatAnswer from "../ChatAnswer/ChatAnswer";
 
-export default function ChatItem({ idChat, avatar, newMessage }) {
-  const [messageText, setMessage] = useLocalStorage("messageText", []);
-  let findChat = data.messages.find((some) => some.messageId === idChat);
-  let defaultPage = findChat.dialogue;
-  // JSON.parse(window.localStorage.getItem("messageText")) || пока нет потому что не меняються чаты
+export default function ChatItem({
+  idChat = "WYZpppK7Js",
+  avatar,
+  newMessage,
+}) {
+  const [dialogues, setDialogues] = useState([]);
+  const [name, setName] = useState("");
   const chucknorrisTalk = useRef();
+  const BASE_URL = "http://localhost:3000/messages";
 
   useEffect(() => {
-    setMessage(defaultPage);
-  }, [findChat]);
+    console.log(dialogues);
+
+    axios
+      .get(`${BASE_URL}?id=${idChat}`)
+      .then(function (response) {
+        // handle success
+        setDialogues(response.data[0].dialogue);
+        setName(response.data[0].senderName);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log("error from json server", error);
+      });
+  }, [idChat]);
 
   useEffect(() => {
     console.log("im change");
-    // let timerId;
+    console.log(newMessage);
 
     if (newMessage !== "" && newMessage.answerText !== "") {
-      console.log(newMessage.answerText);
-      setMessage((messageText) => [...messageText, newMessage]);
+      axios
+        .put(`${BASE_URL}/${idChat}/`, {
+          id: idChat,
+          senderName: name,
+          dialogue: [...dialogues, newMessage],
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            setDialogues((dialogues) => [...dialogues, newMessage]);
+          }
+        });
 
       setTimeout(() => {
         Api()
@@ -39,18 +64,30 @@ export default function ChatItem({ idChat, avatar, newMessage }) {
               data
             ).format("LT")}`;
 
-            const message = { messageText: value, createdAt: normaliseDate };
-
-            setMessage((messageText) => [...messageText, message]);
+            axios
+              .put(`${BASE_URL}/${idChat}/`, {
+                id: idChat,
+                senderName: name,
+                dialogue: [...dialogues, newMessage],
+              })
+              .then((response) => {
+                if (response.status === 200) {
+                  setDialogues((dialogues) => [
+                    ...dialogues,
+                    { messageText: value, createdAt: normaliseDate },
+                  ]);
+                }
+              });
           })
-          .catch((error) => error);
+          .catch((error) => error)
+          .finally(console.log(dialogues));
       }, 15000);
     }
   }, [newMessage]);
 
   return (
     <ul className={s.list}>
-      {messageText.map((item) => {
+      {dialogues.map((item) => {
         let { messageText, answerText, createdAt } = item;
 
         return (
