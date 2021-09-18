@@ -2,6 +2,7 @@
   "messages": [
     {
       "id": "WYZpppK7Js",
+      "avatar": "/images/avatarAlise.png",
       "senderName": "Alice",
       "dialogue": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "id": "a3n64axP16",
+      "avatar": "/images/avatarjosefine.png",
       "senderName": "Josefine",
       "dialogue": [
         {
@@ -58,6 +60,7 @@
     },
     {
       "id": "bp16qLx1dv",
+      "avatar": "/images/avatarPeter.png",
       "senderName": "Peter",
       "dialogue": [
         {
@@ -96,6 +99,7 @@
     },
     {
       "id": "MXkLNGJPDD",
+      "avatar": "/images/avatarmax.png",
       "senderName": "Maks",
       "dialogue": [
         {
@@ -134,6 +138,7 @@
     },
     {
       "id": "O_C4OhMNY_",
+      "avatar": "/images/avatartWatson.png",
       "senderName": "Watson",
       "dialogue": [
         {
@@ -164,6 +169,7 @@
     },
     {
       "id": "tBSEHA7n0K",
+      "avatar": "/images/avatarBob.png",
       "senderName": "Bob",
       "dialogue": [
         {
@@ -190,6 +196,7 @@
           "answerText": "I know so. And I’ve been listening to you complain for over a year now. Trust me. Take the job. What do you have to lose?",
           "createdAt": "4/15/2021  6:26 PM"
         }
+       
       ]
     }
   ]

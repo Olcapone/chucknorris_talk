@@ -4,3 +4,8 @@
 
   padding-left: 24px;
 }
+
+.info {
+  align-self: flex-start;
+  margin-left: 20px;
+}

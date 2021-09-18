@@ -6,7 +6,11 @@ export default function ChatMessage({ avatar, message, date }) {
     <>
       <div className={s.thumb}>
         {" "}
-        <img className={s.avatar} src={avatar} alt="avatar" />
+        <img
+          className={s.avatar}
+          src={process.env.PUBLIC_URL + avatar}
+          alt="avatar"
+        />
         <p className={s.message}>{message}</p>
       </div>
       <span className={s.date}>{date}</span>
