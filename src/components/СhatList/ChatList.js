@@ -40,7 +40,6 @@ export default function ChatList({ searchUser, onSubmit }) {
 
   let visibleContact =
     searchUser.length === 0 ? user || menuConfig : findContact();
-  // console.log(user);
 
   return (
     <ul className={s.list}>
@@ -56,7 +55,6 @@ export default function ChatList({ searchUser, onSubmit }) {
           </li>
         );
       })}
-      {/* <img src= {process.env.PUBLIC_URL + '/images/avatarBob.png'}  width='300' height='300' alt = '' /> */}
     </ul>
   );
 }

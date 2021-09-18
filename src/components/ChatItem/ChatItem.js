@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import shortid from "shortid";
 import axios from "axios";
 import moment from "moment";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import s from "./ChatItem.module.css";
 
 import Api from "../../Api/Api";
@@ -13,6 +15,7 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
   const [dialogues, setDialogues] = useState([]);
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
+
   const chucknorrisTalk = useRef();
   const BASE_URL = "http://localhost:3000/messages";
 
@@ -32,8 +35,6 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
   }, [idChat]);
 
   useEffect(() => {
-    console.log("im change");
-
     if (newMessage !== "" && newMessage.answerText !== "") {
       axios
         .put(`${BASE_URL}/${idChat}/`, {
@@ -51,8 +52,6 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
       setTimeout(() => {
         Api()
           .then((res) => {
-            console.log("Api run!");
-
             chucknorrisTalk.current = res;
             const { value } = chucknorrisTalk.current;
             const data = new Date();
@@ -60,46 +59,50 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
               data
             ).format("LT")}`;
 
-            axios.put(`${BASE_URL}/${idChat}/`, {
-              id: idChat,
-              avatar: avatar,
-              senderName: name,
-              dialogue: [...dialogues, newMessage],
-            });
-
-            setDialogues((dialogues) => [
-              ...dialogues,
-              { messageText: value, createdAt: normaliseDate },
-            ]);
+            axios
+              .put(`${BASE_URL}/${idChat}/`, {
+                id: idChat,
+                avatar: avatar,
+                senderName: name,
+                dialogue: [...dialogues, newMessage],
+              })
+              .then((response) => {
+                setDialogues((dialogues) => [
+                  ...dialogues,
+                  { messageText: value, createdAt: normaliseDate },
+                ]);
+              });
           })
-          .catch((error) => error)
-          .finally(console.log(dialogues));
+          .catch((error) => error);
+        toast.success(" Chuck Norris talk ...");
       }, 15000);
     }
   }, [newMessage]);
 
   return (
-    <ul className={s.list}>
-      {dialogues.map((item) => {
-        let { messageText, answerText, createdAt } = item;
+    <>
+      <ul className={s.list}>
+        {dialogues.map((item) => {
+          let { messageText, answerText, createdAt } = item;
 
-        return (
-          <li
-            className={`${s.item} ${answerText && s.dispatchedMessage}`}
-            key={shortid.generate()}
-          >
-            {messageText ? (
-              <ChatMessage
-                avatar={avatar}
-                message={messageText}
-                date={createdAt}
-              />
-            ) : (
-              <ChatAnswer answer={answerText} date={createdAt} />
-            )}
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li
+              className={`${s.item} ${answerText && s.dispatchedMessage}`}
+              key={shortid.generate()}
+            >
+              {messageText ? (
+                <ChatMessage
+                  avatar={avatar}
+                  message={messageText}
+                  date={createdAt}
+                />
+              ) : (
+                <ChatAnswer answer={answerText} date={createdAt} />
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }
