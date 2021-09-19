@@ -45,4 +45,4 @@ function findUser(senderId) {
   return menuConfig.find((config) => config.id === senderId);
 }
 
-export { menuConfig, findUser, defaultUserId, bob };
+export { menuConfig, findUser, defaultUserId };
