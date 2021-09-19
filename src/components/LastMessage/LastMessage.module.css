@@ -8,3 +8,10 @@
   top: 14%;
   right: 5%;
 }
+
+@media screen and (max-width: 715px) {
+  .date {
+    font-size: 10px;
+    width: 50px;
+  }
+}

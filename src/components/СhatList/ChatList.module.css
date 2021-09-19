@@ -4,8 +4,7 @@
 
 .item {
   position: relative;
-  display: flex;
-  align-items: center;
+
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee3e3;
@@ -14,4 +13,19 @@
 
 .item > p {
   margin-left: 24px;
+}
+
+@media screen and (max-width: 715px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 715px) {
+  .item {
+    display: flex;
+    align-items: center;
+  }
 }

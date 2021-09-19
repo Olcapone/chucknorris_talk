@@ -109,5 +109,4 @@ export default function ChatItem({ idChat = "WYZpppK7Js", newMessage }) {
 
 ChatItem.propTypes = {
   idChat: PropTypes.string,
-  newMessage: PropTypes.shape({}),
 };
