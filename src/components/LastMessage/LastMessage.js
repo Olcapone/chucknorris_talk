@@ -6,6 +6,7 @@ export default function LastMessage({ last }) {
   const [message, changeMes] = useState("");
 
   useEffect(() => {
+    console.log("im change last message");
     changeMes(last);
   }, []);
 

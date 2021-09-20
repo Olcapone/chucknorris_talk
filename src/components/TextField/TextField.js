@@ -1,32 +1,36 @@
-import React, { useState } from "react";
+//------base
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+//------components
 import ChatBoard from "../ChatBoard/ChatBoard";
 import ChatItem from "../ChatItem/ChatItem";
 import DataEntry from "../DataEntry/DataEntry";
-import moment from "moment";
+import localApi from "../../Api/localApi";
+import normalizeData from "../../utils/normalizeData";
+//------styles
 
-import { findUser, defaultUserId } from "../../utils/dataChat";
 import s from "./TextField.module.css";
 
 export default function TextField({ tranferID }) {
   const [TextFieldMessage, saveMessage] = useState("");
-  let data = tranferID || defaultUserId;
-  let user = findUser(data);
-  const { avatar, name } = user;
+  const [user, setUser] = useState({});
+  const { senderName, avatar } = user;
+
+  useEffect(() => {
+    localApi(tranferID).then((response) => {
+      console.log("im changed textfield");
+      setUser(response.data[0]);
+    });
+  }, [tranferID]);
 
   const sendMessage = (value) => {
-    const data = new Date();
-    const normaliseDate = `${moment(data).format("l")} ${moment(data).format(
-      "LT"
-    )}`;
-
-    saveMessage({ answerText: value, createdAt: normaliseDate });
+    saveMessage({ answerText: value, createdAt: normalizeData() });
   };
 
   return (
     <section className={s.section}>
-      <ChatBoard avatar={avatar} name={name} />
-      <ChatItem idChat={data} avatar={avatar} newMessage={TextFieldMessage} />
+      <ChatBoard avatar={avatar} name={senderName} />
+      <ChatItem user={user} newMessage={TextFieldMessage} />
       <DataEntry onChange={sendMessage} />
     </section>
   );

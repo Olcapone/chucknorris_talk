@@ -5,7 +5,11 @@ import s from "./ChatBoard.module.css";
 export default function ChatBoard({ avatar, name }) {
   return (
     <div className={s.infoBord}>
-      <img className={s.avatar} src={avatar} alt="avatar" />
+      <img
+        className={s.avatar}
+        src={process.env.PUBLIC_URL + avatar}
+        alt="avatar"
+      />
       <p>{name}</p>
     </div>
   );

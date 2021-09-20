@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import shortid from "shortid";
 import axios from "axios";
 import s from "./ChatList.module.css";
-//import { menuConfig } from "../../utils/dataChat";
+import findContact from "../../utils/findContact";
 import ChatUser from "../ChatUser/ChatUser";
 
 const BASE_URL = "http://localhost:3000/messages";
@@ -29,20 +29,9 @@ export default function ChatList({ searchUser, onSubmit }) {
     onSubmit(e.currentTarget.id);
   };
 
-  const findContact = () => {
-    const normalizetext = searchUser.toLowerCase();
+  let visibleContact =
+    searchUser.length === 0 ? user : findContact(searchUser, user);
 
-    if (user) {
-      return user.filter((contact) =>
-        contact.senderName.toLowerCase().includes(normalizetext)
-      );
-    }
-  };
-
-  let visibleContact = searchUser.length === 0 ? user : findContact();
-
-  console.log(visibleContact);
-  console.log(user);
   return (
     <ul className={s.list}>
       {user &&
